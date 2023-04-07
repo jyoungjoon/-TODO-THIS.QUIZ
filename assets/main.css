@@ -1,0 +1,138 @@
+:root {
+  --font-size: 62.5%;
+}
+
+/* set base font-size to 10px */
+html {
+  font-size: var(--font-size);
+}
+
+* {
+  font-family: "Roboto Slab", serif !important;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #daffd2;
+  color: darkgreen;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 0.75rem;
+}
+
+header {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5rem;
+}
+
+main {
+  background-color: white;
+  width: 50vw;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 5px solid green;
+  border-radius: 1.5rem;
+}
+
+p,
+ul {
+  font-size: 2.5rem;
+}
+
+.wrapper {
+  margin: 1rem;
+}
+
+.quiz-timer {
+  display: flex;
+  flex-direction: column;
+}
+
+.quiz-container {
+  visibility: visible;
+}
+
+#timer-face {
+  content: url(/assets/images/PngItem_1_148388.png);
+  width: 20rem;
+  height: 20rem;
+  margin: 0 auto;
+  animation-duration: 30s;
+  animation-name: face-changer;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  border-radius: 25%;
+}
+
+.timer {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.answers {
+  padding-top: 2rem;
+}
+
+.button-next {
+  text-align: center;
+}
+
+.time-bar div {
+  height: 0.5rem;
+  background: linear-gradient(to bottom, rgb(0, 255, 34), rgb(5, 94, 27));
+  border-radius: 1rem;
+  margin: 1rem auto;
+  animation-duration: 30s;
+  animation-name: time-bar;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes time-bar {
+  0% {
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(0, 255, 34), rgb(5, 94, 27));
+  }
+  100% {
+    width: 0%;
+    background: linear-gradient(to bottom, rgb(255, 0, 0), rgb(75, 6, 6));
+  }
+}
+
+@keyframes face-changer {
+  0% {
+    content: url(/assets/images/PngItem_1_148388.png);
+  }
+  75% {
+    content: url(/assets/images/PngItem_2_147751.png);
+  }
+  99% {
+    content: url(/assets/images/PngItem_3_1078100.png);
+  }
+  100% {
+    content: url(/assets/images/PngItem_W_1530663.png);
+  }
+}
+
+
