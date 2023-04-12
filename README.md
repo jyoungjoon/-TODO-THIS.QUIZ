@@ -26,3 +26,8 @@ HTML Side
 3. Create a question;
 4. Create a multiple choice answer;
 
+CCS Side
+
+JavaScript Side
+1. Start button; done
+2. Timer;
