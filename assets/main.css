@@ -101,6 +101,7 @@ h1 {
   width: 12rem;
   height: 12rem;
   margin-left: 2rem;
+  opacity: 0.85;
 }
 
 /* Styling for banner inside question card */
