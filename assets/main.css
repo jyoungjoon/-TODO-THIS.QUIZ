@@ -91,16 +91,16 @@ h1 {
 .start-container p {
   font-family: "Overpass", sans-serif !important;
   font-size: 2.25rem;
-  font-weight: 400;
-  color: black;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  font-weight: 500;
+  color: rgb(87, 87, 87);
+  padding: 1rem;
+  margin-left: 1.5rem;
 }
 
 .start-container img {
   width: 12rem;
   height: 12rem;
-  padding: 1rem;
+  margin-left: 2rem;
 }
 
 /* Styling for banner inside question card */
@@ -268,7 +268,7 @@ a {
 }
 
 /* Media Queries */
-@media screen and (max-width: 599.99px) {
+@media screen and (max-width: 699.99px) {
   h1 {
     font-size: 4.5rem;
     margin-left: -2rem;
