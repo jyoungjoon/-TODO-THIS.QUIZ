@@ -99,6 +99,7 @@ let count = 119;
 let countdown;
 let i = 0;
 
+// On page load:
 window.onload = () => {
   startContainer.classList.remove(`hide`);
   questionContainer.classList.add(`hide`);
@@ -108,7 +109,7 @@ window.onload = () => {
   displayHighScores();
 };
 
-// Buttons Event Listeners:
+// Start, Next, and Restart Buttons Event Listeners:
 startButton.addEventListener(`click`, () => {
   questionCount = 1;
   startContainer.classList.add(`hide`);
@@ -142,14 +143,14 @@ const timerDisplay = () => {
     let minutes = Math.floor(count / 60);
     let seconds = count % 60;
     count--;
-
+    // Format the timer so it displays 00:00:
     const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
     const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
     timeLeft.innerHTML = `${formattedMinutes}:${formattedSeconds}`;
-
+    // If the timer reaches 0, stop the timer, set the timer to 00:00 and end the quiz:
     if (count <= -2) {
-      alert(`Sorry, you ran out of time 😥`);
       timeLeft.innerHTML = `00:00`;
+      alert(`Sorry, you ran out of time 😥`);
       quizOver();
       clearInterval(countdown);
     }
@@ -164,11 +165,15 @@ function getRandomQuestion() {
 
 // Get the questions and options:
 function getQuestion() {
+  // Display the question number:
   numberOfQuestion.innerHTML = `${questionCount} of ${questionArray.length} QUESTIONS`;
+  // Display the question and options using destructuring:
   let { question, options, correct } = questionArray[i];
   questionText.innerHTML = question;
+  // Randomize the order of the options:
   options.sort(() => Math.random() - 0.5);
   answerBox.innerHTML = options
+    // Display the options as buttons using map and join:
     .map((option) => {
       return `<button class='answerButtons' onClick='checker(this)'>${option}</button>`;
     })
@@ -177,11 +182,13 @@ function getQuestion() {
 
 // Check the answer:
 function checker(userOption) {
+  // Set the selected option to a variable:
   const selectedOption = userOption.innerHTML;
+  // Filter the question array to find the correct answer using some:
   const filterQuestion = questionArray.some(
     (question) => question.correct === selectedOption
   );
-
+  // If the selected option is correct, add 1 to the score, display CORRECT, and disable other options:
   if (filterQuestion) {
     event.target.classList.add(`disable`);
     event.target.style.backgroundColor = `#77DD77`;
@@ -194,6 +201,7 @@ function checker(userOption) {
     disableAnswerButtons();
     makeScoreBlink();
   } else {
+    // If the selected option is incorrect, subtract 10 seconds from the timer, display WRONG
     event.target.classList.add(`disable`);
     count -= 10;
     rightOrWrong.innerHTML = `WRONG 😥`;
@@ -205,15 +213,15 @@ function checker(userOption) {
 // Display high scores:
 function displayHighScores() {
   let key = `highScores`;
-  // Get high scores from local storage
-  let highScores = JSON.parse(localStorage.getItem(key)) || [];
+  // Grab high scores from local storage and parse it to an array; an empty array if there are no high scores:
+  let highScores = JSON.parse(localStorage.getItem(key)) ?? [];
 
   // Sort high scores array by score: highest to lowest
   highScores.sort((a, b) => {
     return b.userScore - a.userScore;
   });
 
-  // Display high scores using forEach loop and appendChild
+  // Display high scores using forEach loop and append child element to the high score board:
   highScores.forEach((score) => {
     let newUser = document.createElement(`li`);
     newUser.textContent = `${score.userInitials} - ${score.userScore} - ${score.userTime}`;
