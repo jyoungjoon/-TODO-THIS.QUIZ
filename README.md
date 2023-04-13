@@ -1,4 +1,4 @@
-# //TODO: THIS QUIZ!
+# // TODO: THIS QUIZ!
 
 This is a game-themed quiz app that tests your knowledge of the basics of JavaScript. Can you get a perfect score?
 
