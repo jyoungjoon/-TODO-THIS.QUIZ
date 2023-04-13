@@ -74,6 +74,35 @@ h1 {
   margin-top: 10rem;
 }
 
+/* Section start container/card styling */
+.start-container {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: auto;
+}
+
+.start-container div {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.start-container p {
+  font-family: "Overpass", sans-serif !important;
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: black;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.start-container img {
+  width: 12rem;
+  height: 12rem;
+  padding: 1rem;
+}
+
 /* Styling for banner inside question card */
 #score-banner {
   display: flex;
@@ -238,3 +267,13 @@ a {
   visibility: hidden;
 }
 
+/* Media Queries */
+@media screen and (max-width: 599.99px) {
+  h1 {
+    font-size: 4.5rem;
+    margin-left: -2rem;
+  }
+  .container {
+    width: 100%;
+  }
+}

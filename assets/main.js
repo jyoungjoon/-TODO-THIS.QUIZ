@@ -60,7 +60,7 @@ const questionArray = [
   },
 
   {
-    question: `0 && hi, what will be the output?`,
+    question: `What will "0 && hi" return?`,
     options: [`ReferenceError`, `true`, `0`, `false`],
     correct: `0`,
   },
@@ -76,7 +76,7 @@ const questionArray = [
 const startButton = document.querySelector(`#start-button`);
 const nextButton = document.querySelector(`#next-button`);
 const restartButton = document.querySelector(`#restart-button`);
-const startContainer = document.querySelector(`#start-container`);
+const startContainer = document.querySelector(`.start-container`);
 const questionContainer = document.querySelector(`#question-container`);
 const scoreContainer = document.querySelector(`#score-container`);
 const numberOfQuestion = document.querySelector(`#number-of-question`);
