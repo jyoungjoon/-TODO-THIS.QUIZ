@@ -1,33 +1,51 @@
-### Pseudo Coding:
+# //TODO: THIS QUIZ!
 
-At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
+This is a game-themed quiz app that tests your knowledge of the basics of JavaScript. Can you get a perfect score?
 
-To help familiarize you with these tests and allow you to use the skills covered in this module, this Challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
+## Description
 
-This week’s coursework will equip you with all the skills you need to succeed in this assignment.
+![Screenshot](./assets/images/screenshot.png)
 
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
-```
+It is a timed (2-minute) quiz that will deduct 10 seconds from your remaining time if you answer incorrectly but it will add 1 point to the score if you answer correctly. There is a total of 10 questions to solve! At the end of the quiz, you will be able to save your score and initials to the scoreboard. Highest scores will be displayed at the top of the scoreboard. If same score is achieved, the initials will be displayed in the order it was entered.
 
-HTML Side
-1. Create a start button;
-2. Create a timer;
-3. Create a question;
-4. Create a multiple choice answer;
+* Developed using HTML, CSS, and JavaScript.
+* Google Fonts (Overpass and Roboto) were used for the fonts.
+* Background image was taken from [FREEPIK](https://www.freepik.com).
 
-CCS Side
+## Getting Started
 
-JavaScript Side
-1. Start button; done
-2. Timer;
+### Dependencies
+
+All you need is a web browser to run this app.
+
+### Installing
+
+* Download the zip file or clone the repository to your local machine.
+* Open the index.html file in your web browser.
+
+  OR
+
+* You can simply click on the link to run the app:
+[//TODO: THIS QUIZ!](https://jyoungjoon.github.io/-TODO-THIS.QUIZ/)
+
+## Authors
+
+Young Jang - [Github](https://github.com/jyoungjoon)
+
+## Version History
+
+* 0.1
+    * Initial Release
+
+## License
+
+This project is licensed under the [MIT] License - see the LICENSE.md file for details
+
+## Acknowledgments
+
+Inspiration, code snippets, etc.
+* [awesome-readme](https://github.com/matiassingers/awesome-readme)
+* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+* [dbader](https://github.com/dbader/readme-template)
+* [zenorocha](https://gist.github.com/zenorocha/4526327)
+* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
