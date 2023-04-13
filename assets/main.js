@@ -60,7 +60,7 @@ const questionArray = [
   },
 
   {
-    question: `What will "0 && hi" return?`,
+    question: `0 && hi, returns:`,
     options: [`ReferenceError`, `true`, `0`, `false`],
     correct: `0`,
   },
