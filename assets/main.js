@@ -15,14 +15,9 @@ const questionArray = [
   },
 
   {
-    question: `How does the forEach() method differ from a for statement?`,
-    options: [
-      `forEach allows you to specify your own iterator, whereas for does not.`,
-      `forEach can be used only with strings, whereas for can be used with additional data types.`,
-      `for loops can be nested; whereas forEach loops cannot.`,
-      `forEach can be used only with an array, whereas for can be used with additional data types.`,
-    ],
-    correct: `forEach can be used only with an array, whereas for can be used with additional data types.`,
+    question: `Which expression evaluates to true?`,
+    options: [`Boolean(NaN)`, `Boolean(0)`, `Boolean("false")`, `Boolean("")`],
+    correct: `Boolean("false")`,
   },
 
   {
@@ -38,9 +33,14 @@ const questionArray = [
   },
 
   {
-    question: `Which statement can take a single expression as input and then look through a number of choices until one that matches that value is found?`,
-    options: [`else if`, `for`, `when`, `switch`],
-    correct: `switch`,
+    question: `Which method converts JSON data to a JavaScript object?`,
+    options: [
+      `JSON.fromString();`,
+      `JSON.parse()`,
+      `JSON.toObject()`,
+      `JSON.stringify()`,
+    ],
+    correct: `JSON.parse()`,
   },
   {
     question: `Which choice is not an array method?`,
@@ -60,14 +60,9 @@ const questionArray = [
   },
 
   {
-    question: `How would you add a data item named animal with a value of sloth to local storage for the current domain?`,
-    options: [
-      `LocalStorage.setItem('animal','sloth');`,
-      `document.localStorage.setItem('animal','sloth');`,
-      `localStorage.setItem({animal:'sloth'});`,
-      `localStorage.setItem('animal','sloth');`,
-    ],
-    correct: `document.localStorage.setItem('animal','sloth');`,
+    question: `What will "0 && hi" return?`,
+    options: [`ReferenceError`, `true`, `0`, `false`],
+    correct: `0`,
   },
 
   {
