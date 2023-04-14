@@ -90,11 +90,11 @@ h1 {
 
 .start-container p {
   font-family: "Overpass", sans-serif !important;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 500;
   color: rgb(87, 87, 87);
   padding: 1rem;
-  margin: 5rem 0rem 5rem 1rem;
+  margin: 5rem 0rem 5rem 1.5rem;
 }
 
 .start-container img {
@@ -274,6 +274,11 @@ a {
 
 /* Media Queries */
 @media screen and (max-width: 699.99px) {
+  .start-container p {
+    font-size: 1.5rem;
+    margin: 2rem 0rem 2rem 1rem;
+    line-height: 2rem;
+  }
   h1 {
     font-size: 4.5rem;
     margin-left: -2rem;
