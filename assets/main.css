@@ -274,6 +274,16 @@ a {
 
 /* Media Queries */
 @media screen and (max-width: 699.99px) {
+  #number-of-question,
+  #right-or-wrong {
+    font-size: 1.5rem;
+    padding: 0.25rem;
+  }
+
+  #score-banner {
+    white-space: nowrap;
+  }
+
   .start-container p {
     font-size: 1.5rem;
     margin: 2rem 0rem 2rem 1rem;
@@ -283,6 +293,7 @@ a {
     font-size: 4.5rem;
     margin-left: -2rem;
   }
+  
   .container {
     width: 100%;
   }
