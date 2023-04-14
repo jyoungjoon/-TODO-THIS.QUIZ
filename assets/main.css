@@ -94,14 +94,18 @@ h1 {
   font-weight: 500;
   color: rgb(87, 87, 87);
   padding: 1rem;
-  margin-left: 1.5rem;
+  margin: 5rem 0rem 5rem 1rem;
 }
 
 .start-container img {
-  width: 12rem;
-  height: 12rem;
+  width: 8rem;
+  height: 8rem;
   margin-left: 2rem;
   opacity: 0.85;
+  border-radius: 15%;
+  border: 0.5rem double black;
+  box-sizing: content-box;
+  padding: 0.5rem;
 }
 
 /* Styling for banner inside question card */
