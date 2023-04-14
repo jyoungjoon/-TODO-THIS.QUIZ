@@ -274,6 +274,19 @@ a {
 
 /* Media Queries */
 @media screen and (max-width: 699.99px) {
+  .numbers {
+    color: white;
+    font-weight: 700;
+    font-size: 2.25rem;
+    width: 47.5vw;
+    min-width: 280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin-top: 10rem;
+  }
+
   #number-of-question,
   #right-or-wrong {
     font-size: 1.5rem;
@@ -293,7 +306,7 @@ a {
     font-size: 4.5rem;
     margin-left: -2rem;
   }
-  
+
   .container {
     width: 100%;
   }
