@@ -87,6 +87,9 @@ const score = document.querySelector(`#score`);
 const timeLeft = document.querySelector(`#time-left`);
 const scoreText = document.querySelector(`#score-text`);
 const rightOrWrong = document.querySelector(`#right-or-wrong`);
+const correctSound = new Audio(`assets/sounds/correct.wav`);
+const wrongSound = new Audio(`assets/sounds/wrong.wav`);
+const nextSound = new Audio(`assets/sounds/next.wav`);
 
 // Initialize dynamic variables:
 let scoreCount = 0;
@@ -117,6 +120,7 @@ startButton.addEventListener(`click`, () => {
 });
 
 nextButton.addEventListener(`click`, () => {
+  nextSound.play();
   rightOrWrong.innerHTML = ``;
   nextButton.classList.add(`disable`);
 
@@ -189,6 +193,7 @@ function checker(userOption) {
     event.target.style.backgroundColor = `#77DD77`;
     scoreCount += 1;
     rightOrWrong.innerHTML = `CORRECT 🤩`;
+    correctSound.play();
     score.innerHTML = scoreCount;
     questionCount += 1;
     nextButton.classList.remove(`disable`);
@@ -200,6 +205,7 @@ function checker(userOption) {
     event.target.classList.add(`disable`);
     count -= 10;
     rightOrWrong.innerHTML = `WRONG 😥`;
+    wrongSound.play();
     event.target.style.backgroundColor = `#FFCCCB`;
     makeTimerBlink();
   }
